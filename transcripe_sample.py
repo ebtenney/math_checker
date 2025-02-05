@@ -65,6 +65,10 @@ with open(pdf_id + ".tex.zip", "wb") as f:
 with zipfile.ZipFile(pdf_id+".tex.zip","r") as zip_ref:
     zip_ref.extractall()
 
+# delete file if exists to make space
+if os.path.exists("transcription_result.txt"):
+    os.remove("transcription_result.txt")
+
 # move result to working directory, convert to txt
 os.rename(pdf_id+"/"+pdf_id+".tex", "transcription_result.txt")
 
