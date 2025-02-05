@@ -1,0 +1,44 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+
+\begin{document}
+(13)
+
+\[
+\begin{aligned}
+& y=\sqrt{5+x^{2}}, y=0, x=0, x=2 \\
+& V=2 \pi \int_{0}^{2} x \sqrt{5+x^{2}} d x \\
+& H=2 \pi x-\frac{2(5 \cdot \sqrt{5}-27) \pi}{3} \\
+& V=\frac{-2(5 \sqrt{5}-27) \pi}{3} \\
+& V=10.5465 \pi \approx 33.1326
+\end{aligned}
+\]
+
+\[
+\begin{aligned}
+& \text { (15) } x y=1, x=0, y=1, y=3 \\
+& y=\frac{1}{x} \\
+& y=2 \pi \int_{1}^{3} y f(y) d y . \\
+& v=2 \pi \int_{1}^{3} \frac{1}{x} \cdot x d x \\
+& v=2 \pi \int_{1}^{3} 1 d x \\
+& y=2 \pi \cdot 2=4) \pi .
+\end{aligned}
+\]
+
+\[
+\begin{array}{ll}
+17 & y=x^{3 / 2} y=8, x=0 \\
+V=2 \pi \int_{0}^{8} y \cdot y^{2 / 3} d y & V=2 \pi \cdot \frac{3}{8} \cdot 256 \\
+V=2 \pi \int_{0}^{8} y^{5 / 3} d y, & V=192 \pi \\
+V=2 \pi\left[\frac{3}{8} y^{8 / 3}\right]_{0}^{8} &
+\end{array}
+\]
+
+
+\end{document}
