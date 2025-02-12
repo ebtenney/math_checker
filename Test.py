@@ -13,6 +13,10 @@ with open(file_path, 'r') as file:
 response = model.generate_content(file_content)
 print("Content of AI Answer is: " + response.text)
 S1 = response.text
+
+write_file = open("ai_results.txt", "w")
+write_file.write(S1)
+write_file.close()
 #S1 = "Heres how to solve this: 1. **5 + 5 = 10** 2. **√10 ≈ 3.162**  (This is the square root of 10) 3. **10 / 8 = 1.25** (This is 10 divided by 8) Therefore, there\'s ambiguity in the question.  It\'s unclear whether the dividend applies to the sum before or after taking the square root.  The question needs clearer phrasing.  The two possible answers are approximately **3.162** and **1.25**."
 
 
