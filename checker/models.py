@@ -1,7 +1,9 @@
+from django.db import models
+
+# Create your models here.
 import json
 import time
 import zipfile
-from django.db import models
 import requests
 import google.generativeai as genai
 
@@ -15,7 +17,7 @@ class Question(models.Model):
     chapter = models.IntegerField()
     question_number = models.IntegerField()
     question_text = models.CharField(max_length=200)
-    ai_response = models.CharField()
+    ai_response = models.CharField(max_length=500)
 
     def get_gemini_response(self):
         genai.configure(api_key="AIzaSyCocAfdhyrwvn8kJzpfULH7vGcayiC2O80") 
