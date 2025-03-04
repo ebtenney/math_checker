@@ -1,5 +1,6 @@
 import google.generativeai as genai
 import os
+from collections import Counter
 # Suppress logging warnings
 os.environ["GRPC_VERBOSITY"] = "ERROR"
 os.environ["GLOG_minloglevel"] = "2"
