@@ -26,37 +26,16 @@ with open(file_path, 'r') as file:
     file_content = file.read()
 S2 = file_content
 print("Content of answer is: " + S2)
-L1 = S1.split()
-L2 = S2.split()
+def get_shingles(text, n=5):
+    words = text.split()
+    return Counter([" ".join(words[i:i+n]) for i in range(len(words) - n + 1)])
 
-FlaggedWordCount = 0
-AOF = 0
-FlaggedIndexList = []
-TempFlaggedIndexList = []
+shingles1 = get_shingles(S1)
+shingles2 = get_shingles(S2)
 
-for element in L1:
-    inds = 0
-    try:
-        while L2.index(element, inds) is not None:
-            inds += 1
-            ind = L1.index(element)
-            ind2 = L2.index(element)
-            TempFlaggedIndexList = [ind]
-            ind += 1
-            ind2 += 1
-            AOF = 1
-            while L1[ind] == L2[ind2] and ind not in FlaggedIndexList:
-                TempFlaggedIndexList.append(ind)
-                ind += 1
-                ind2 += 1
-                AOF += 1
-            if AOF > 3:
-                for i in TempFlaggedIndexList:
-                    FlaggedIndexList.append(i)
-                FlaggedWordCount += AOF
-    except:
-        pass
-            
-print("Flagged " + str(FlaggedWordCount) + " Words:")
-for index in FlaggedIndexList:
-    print(L1[index], end=" ")
+
+intersection = sum((shingles1 & shingles2).values())
+union = sum((shingles1 | shingles2).values())
+
+jaccard_similarity = intersection / union
+print("Jaccard Similarity:", jaccard_similarity)
