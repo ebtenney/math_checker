@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+<body>
+
+    <h1>Question List</h1>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Textbook</th>
+                <th>Chapter</th>
+                <th>Question #</th>
+                <th>Question Text</th>
+                <th>AI Response</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for question in question_list %}
+            <tr>
+                <td>{{ question.id }}</td>
+                <td>{{ question.textbook }}</td>
+                <td>{{ question.chapter }}</td>
+                <td>{{ question.question_number }}</td>
+                <td>{{ question.question_text }}</td>
+                <td>{{ question.ai_response }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="6">No questions found.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+<body>
+
+    <h1>Student Work List</h1>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>File</th>
+                <th>Transcription</th>
+                <th>PDF ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for work in student_work_list %}
+            <tr>
+                <td>{{ work.id }}</td>
+                <td>
+                    <a href="{{ work.file.url }}" download>{{ work.file.name }}</a>
+                </td>
+                <td>{{ work.transcription|truncatewords:20 }}</td>
+                <td>{{ work.pdf_id }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="4">No student work found.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>
+
