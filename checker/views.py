@@ -24,8 +24,11 @@ def results(request, question_id):
 
 def student_work_list(request):
     student_work_list = Student_Work.objects.all()
-    return render(request, 'student_work_list.html', {'student_work_list': student_work_list})
+    return render(request, 'checker/student_work_list.html', {'student_work_list': student_work_list})
 
 def question_list(request):
     question_list = Question.objects.all()
-    return render(request, 'question_list.html', {'question_list': question_list})
+    return render(request, 'checker/question_list.html', {'question_list': question_list})
+
+def upload_page(request):
+    return render(request, 'checker/BasicSite.html')

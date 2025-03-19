@@ -1,0 +1,99 @@
+[
+    {
+        "model": "checker.question",
+        "pk": 1,
+        "fields": {
+            "textbook": "Calculus",
+            "chapter": 6.1,
+            "question_number": 5,
+            "question_text": "Sketch the region enclosed by the given curves. Decide whether to integrate with respect to x or y. Then find the area of the region. y=e^x, y=x^2-1, x=-1, x=1.",
+            "ai_response": ""
+        }
+    },
+    {
+        "model": "checker.question",
+        "pk": 2,
+        "fields": {
+            "textbook": "Calculus",
+            "chapter": 6.1,
+            "question_number": 6,
+            "question_text": "Sketch the region enclosed by the given curves. Decide whether to integrate with respect to x or y. Then find the area of the region. y=sinx, y=x, x=pi/2, x=pi.",
+            "ai_response": ""
+        }
+    },
+    {
+        "model": "checker.question",
+        "pk": 3,
+        "fields": {
+            "textbook": "Calculus",
+            "chapter": 6.1,
+            "question_number": 7,
+            "question_text": "Sketch the region enclosed by the given curves. Decide whether to integrate with respect to x or y. Then find the area of the region. y=(x-2)^2, y=x.",
+            "ai_response": ""
+        }
+    },
+    {
+        "model": "checker.question",
+        "pk": 4,
+        "fields": {
+            "textbook": "Calculus",
+            "chapter": 6.1,
+            "question_number": 8,
+            "question_text": "Sketch the region enclosed by the given curves. Decide whether to integrate with respect to x or y. Then find the area of the region. y=x^2-4x, y=2x",
+            "ai_response": ""
+        }
+    },
+    {
+        "model": "checker.question",
+        "pk": 5,
+        "fields": {
+            "textbook": "Calculus",
+            "chapter": 6.1,
+            "question_number": 9,
+            "question_text": "Sketch the region enclosed by the given curves. Decide whether to integrate with respect to x or y. Then find the area of the region. y=1/x, y=1/x^2, x=2.",
+            "ai_response": ""
+        }
+    },
+    {
+        "model": "checker.question",
+        "pk": 6,
+        "fields": {
+            "textbook": "Calculus",
+            "chapter": 6.1,
+            "question_number": 10,
+            "question_text": "Sketch the region enclosed by the given curves. Decide whether to integrate with respect to x or y. Then find the area of the region. y=sinx, y=2x/pi, x>=0.",
+            "ai_response": ""
+        }
+    },
+    {
+        "model": "checker.question",
+        "pk": 7,
+        "fields": {
+            "textbook": "Calculus",
+            "chapter": 6.1,
+            "question_number": 11,
+            "question_text": "Sketch the region enclosed by the given curves. Decide whether to integrate with respect to x or y. Then find the area of the region. x=1-y^2, x=y^2-1.",
+            "ai_response": ""
+        }
+    },
+    {
+        "model": "checker.question",
+        "pk": 8,
+        "fields": {
+            "textbook": "Calculus",
+            "chapter": 6.1,
+            "question_number": 12,
+            "question_text": "Sketch the region enclosed by the given curves. Decide whether to integrate with respect to x or y. Then find the area of the region. 4x+y^2=12, x=y.",
+            "ai_response": ""
+        }
+    },
+    {
+        "model": "checker.student_work",
+        "pk": 1,
+        "fields": {
+            "file": "uploads/example.pdf",
+            "transcription": "Student's transcription",
+            "pdf_id": "PDF123"
+        }
+    }
+]

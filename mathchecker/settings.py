@@ -34,7 +34,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-&psk#na5l=p3q8
 # DEBUG = True
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -88,7 +88,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'django_db',           # Database name
         'USER': 'django_user',         # PostgreSQL username
-        'PASSWORD': 'your_password',   # PostgreSQL password
+        'PASSWORD': 'password',   # PostgreSQL password
         'HOST': 'localhost',           # Database server address
         'PORT': '5432',                # Default PostgreSQL port
     }
