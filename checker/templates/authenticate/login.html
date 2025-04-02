@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    {% load static %}
+    <link rel="shortcut icon" type="image/png" href="{% static 'diarization/favicon.ico' %}"/>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .login-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .login-container h2 {
+            margin-bottom: 20px;
+        }
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .login-btn {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .login-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+
+</head>
+<body>
+<header>
+    <div class="center-logo">
+    </div>
+</header>
+<main>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form method="post">
+            {% csrf_token %}
+            <label for="username">Username</label>
+            <input type="text" class="input-field" id="username" name="username" placeholder="username" required>
+
+            <label for="password">Password</label>
+            <input type="password" class="input-field" id="password" name="password" placeholder="password" required>
+
+            <div class="btns">
+                <button class="login-btn" type="submit">Login</button>
+            </div>
+
+            {% if error_message %}
+                <div class="pill-error">
+                    <img src="{% static 'diarization/icons8-info.svg' %}" alt="info" class="info-icon"/>
+                    username or password is incorrect
+                </div>
+            {% endif %}
+            <p>Don't have an account? <a href="{% url 'signup' %}">Sign up</a></p>
+        </form>
+
+    </div>
+
+</main>
+
+
+</body>
+</html>

@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 import json
@@ -24,6 +25,11 @@ class Question(models.Model):
         model = genai.GenerativeModel("gemini-1.5-flash")
         self.ai_response = model.generate_content(self.question_text)
 
+class Student_Work_PDF(models.Model):
+    pdf = models.FileField(upload_to="uploads/")
+    name = models.CharField(default=f"{pdf.name}", max_length=25)
+    upload_date = models.DateTimeField(auto_now_add=True)
+    owner = models.ForeignKey(User, on_delete=models.CASCADE)
 
 class Student_Work(models.Model): 
     file = models.FileField()

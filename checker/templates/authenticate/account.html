@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Account</title>
+    {% load static %}
+    {% load custom_filters %}
+    <link rel="stylesheet" href="{% static 'diarization/styles.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'diarization/favicon.ico' %}"/>
+    <style>
+        #audio-section {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 600px;
+        }
+
+        .container {
+            flex: 1;
+            padding: 20px;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 50%;
+        }
+
+        .container-flex {
+            display: flex;
+            align-items: center;
+        }
+
+        .table-container {
+            margin-right: 20%;
+        }
+
+        .actions-container {
+            margin-left: 20%;
+            width: 70%;
+            height: 500px;
+        }
+
+        .actions-container a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .table-container a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .table-container a:hover {
+            text-decoration: underline;
+        }
+
+        .actions-container h1, p {
+            text-align: left;
+        }
+
+        .actions-container a:hover {
+            text-decoration: underline;
+        }
+
+        .t {
+            min-height: 400px;
+            max-height: 400px;
+            overflow-y: auto;
+            border-top: 1px solid var(--gray);
+        }
+
+        table {
+            margin: 0 auto;
+            border: 1px solid var(--gray);
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td {
+            border-right: 1px solid var(--gray);
+            padding: 3px 10px;
+        }
+
+        td audio {
+            padding-top: 3px;
+        }
+
+        tr {
+            border-bottom: 1px solid var(--gray);
+        }
+
+        th {
+            background-color: var(--medium-gray);
+            font-weight: bold;
+            text-align: left;
+            padding: 5px 10px;
+            border-right: 1px solid var(--gray);
+        }
+
+        @media screen and (max-width: 1280px) {
+            .actions-container {
+                margin-left: 5%;
+            }
+
+            .table-container {
+                margin-right: 5%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<header>
+</header>
+
+<main>
+    <section id="audio-section">
+        <div class="container container-flex" style="width: 40%">
+            <div class="actions-container">
+                <h1>Hello, {{ user.username }}.</h1>
+                <p>More account actions will live here, eventually.</p>
+                <p style="margin-top: 80px;"><a href="{% url 'logout' %}">log out</a></p>
+            </div>
+        </div>
+        <div class="container container-flex" style="width: 60%">
+            <div class="table-container">
+                <h1 style="text-align: left;">My Audio</h1>
+                <div class="t">
+                <table>
+                    <thead>
+                    <tr>
+                        <th style="width: fit-content">ID</th>
+                        <th style="width: fit-content">Assignment</th>
+                        <th style="width: fit-content">Questions</th>
+                        <th style="width: fit-content">Actions</th>
+                    </tr>
+                    </thead>
+                </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p style="text-align: center">&copy; 2023 AudioNote</p>
+    <p style="text-align: center">icons by <a target="_blank" href="https://icons8.com">Icons8</a></p>
+</footer>
+</body>
+</html>
