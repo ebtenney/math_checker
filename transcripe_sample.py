@@ -4,6 +4,9 @@ import time
 import zipfile
 import os
 
+
+# This code is responsible for using mathpix to convert from PDF to latex. You will need an API key from mathpix, which costs some money.
+
 # options = {
 #     "conversion_formats": {"docx": True, "tex.zip": True},
 #     "math_inline_delimiters": ["$", "$"],
