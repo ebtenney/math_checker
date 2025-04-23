@@ -1,6 +1,6 @@
 d = 10
 
-
+# These functions and code are used to analyze the response and answer, to determine how similar they are. The algorithm can easily be replaced.
 
 def search(pattern, text, q):
     m = len(pattern)
