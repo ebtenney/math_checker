@@ -5,6 +5,9 @@ from collections import Counter
 os.environ["GRPC_VERBOSITY"] = "ERROR"
 os.environ["GLOG_minloglevel"] = "2"
 
+# This is the main code for the comparison and getting AI response. You will need an API key and pick a model, which you can obtain at this site for free.
+# https://ai.google.dev/gemini-api/docs/api-key
+
 genai.configure(api_key="AIzaSyCocAfdhyrwvn8kJzpfULH7vGcayiC2O80") 
 model = genai.GenerativeModel("gemini-1.5-flash")
 
