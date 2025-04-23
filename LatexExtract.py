@@ -1,6 +1,10 @@
 from pylatexenc.latexwalker import (
     LatexWalker, LatexMacroNode, LatexCharsNode, LatexGroupNode, LatexEnvironmentNode
 )
+
+
+# These functions and code exist to extract latex commands from the contents. This is then used with the algorithm to determine the simularity score.
+
 def latex_nodes_to_string(nodelist):
     return "".join(node.latex_verbatim() for node in nodelist)
 def SeperateLatex(text):
